@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 interface Student {
     name: string;
     surname: string;
-    age: number;  // age tipini number qilib o'zgartirdim
+    age: number;
 }
 
 const Add: React.FC = () => {
@@ -17,7 +17,7 @@ const Add: React.FC = () => {
 
     const [name, setName] = useState<string>('');
     const [surname, setSurname] = useState<string>('');
-    const [age, setAge] = useState<string>('');  // age haliyam string bo'lib qolmoqda
+    const [age, setAge] = useState<string>('');
 
     async function createStudent(body: Student) {
         return await axios.post(`${HTTP}/students`, body);
@@ -33,7 +33,7 @@ const Add: React.FC = () => {
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        const data: Student = { name, surname, age: Number(age) }; // age-ni number ga aylantirdim
+        const data: Student = { name, surname, age: Number(age) };
         mutation.mutate(data);
     }
 

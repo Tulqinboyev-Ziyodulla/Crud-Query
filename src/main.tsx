@@ -9,7 +9,7 @@ const queryClient = new QueryClient({
             retry: 1,
             refetchOnWindowFocus: false,
             staleTime: 1000 * 60 * 5,
-            cacheTimeMs: 1000 * 60 * 10,  // cacheTimeMsni ishlatish
+            cacheTimeMs: 1000 * 60 * 10, 
         }
     }
 });
